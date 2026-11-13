@@ -1,8 +1,0 @@
-README.md
-pyproject.toml
-src/csvguard/__init__.py
-src/csvguard/reader.py
-src/csvguard.egg-info/PKG-INFO
-src/csvguard.egg-info/SOURCES.txt
-src/csvguard.egg-info/dependency_links.txt
-src/csvguard.egg-info/top_level.txt

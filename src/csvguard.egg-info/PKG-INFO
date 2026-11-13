@@ -1,5 +1,0 @@
-Metadata-Version: 2.4
-Name: csvguard
-Version: 0.1.0
-Summary: A lightweight CLI tool for CSV data quality analysis
-Requires-Python: >=3.10
