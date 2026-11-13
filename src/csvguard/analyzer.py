@@ -3,7 +3,7 @@ def find_missing_headers(data):
         raise ValueError("Data provided is empty or first row is empty.")
     headers = data[0]
     missing_headers = []
-    for header_index in range (len(headers)):
+    for header_index in range(len(headers)):
         header = headers[header_index] 
         if header.strip() == "":
             missing_headers.append({

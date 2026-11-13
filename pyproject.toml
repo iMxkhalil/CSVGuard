@@ -7,6 +7,12 @@ name = "csvguard"
 version = "0.1.0"
 description = "A lightweight CLI tool for CSV data quality analysis"
 requires-python = ">=3.10"
+dependencies = [
+    "typer",
+]
+
+[project.scripts]
+csvguard = "csvguard.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]

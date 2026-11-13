@@ -306,7 +306,7 @@ def test_duplicate_rows_multiple_duplicates():
         ["name", "email", "age"],
         ["Alex", "alex@gmail.com", "20"],
         ["Sami", "sami@gmail.com", "32"],
-        ["Alex", "alex@gmail.com", "20"],
+        [" alex ", "Alex@gmail.com", "20"],
         ["Alex", "alex@gmail.com", "20"],
     ]
 
@@ -315,7 +315,7 @@ def test_duplicate_rows_multiple_duplicates():
     expected_result = [
         {
             "row_index": 3,
-            "row_data": ["Alex", "alex@gmail.com", "20"]
+            "row_data": [" alex ", "Alex@gmail.com", "20"]
         },
         {
             "row_index": 4,
@@ -466,5 +466,18 @@ def test_duplicate_headers_empty_headers():
     with pytest.raises(ValueError):
         find_duplicate_headers(data)
 
+def test_inconsistent_rows_short_and_long():
+    data = [
+        ["name", "email", "age"],
+        ["Ali", "ali@example.com", "21"],
+        ["Sara", "19"],
+        ["Ahmed", "ahmed@example.com", "24", "extra"],
+    ]
+
+    result = find_inconsistent_rows(data)
+
+    assert len(result) == 2
+    assert result[0]["row_index"] == 2
+    assert result[1]["row_index"] == 3
 
     
