@@ -29,7 +29,7 @@ CSVGuard performs the following checks:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CSVGuard.git
+git clone https://github.com/iMxkhalil/CSVGuard.git
 cd CSVGuard
 ```
 

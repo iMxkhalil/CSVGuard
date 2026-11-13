@@ -9,7 +9,7 @@ from csvguard.analyzer import (
     find_inconsistent_rows,
 )
 
-app=typer.Typer() 
+app = typer.Typer() 
 
 
 def handle_error(error):
